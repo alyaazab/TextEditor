@@ -6,10 +6,7 @@ import javafx.geometry.Insets;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 
 
@@ -30,12 +27,12 @@ public class Controller {
         return textArea;
     }
 
-    public BorderPane getBorderPane() {
+    public Pane getBorderPane() {
         return borderPane;
     }
 
     @FXML
-    public BorderPane borderPane;
+    public Pane borderPane;
 
     @FXML
     public ScrollPane scrollPane;
@@ -64,7 +61,6 @@ public class Controller {
     @FXML
     public void initialize() {
         menuBar.setBackground(new Background(new BackgroundFill(Color.rgb(60,63,65 ), CornerRadii.EMPTY, Insets.EMPTY)));
-        menuBar.setStyle(".menu-item .label{-fx-text-fill: greenyellow;}");
         borderPane.setBackground(new Background(new BackgroundFill(Color.rgb(60,63,65 ), CornerRadii.EMPTY, Insets.EMPTY)));
         scrollPane.setBackground(new Background(new BackgroundFill(Color.rgb(60,63,65 ), CornerRadii.EMPTY, Insets.EMPTY)));
         model = new Model();
